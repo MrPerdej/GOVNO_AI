@@ -11,7 +11,7 @@ class DQNAgent:
     def __init__(self, input_shape, action_space, model_path="dqn_model.keras"):
         self.state_shape = input_shape
         self.action_space = action_space
-        self.action_size = int(np.prod(action_space.nvec))  # 👈 привели к int
+        self.action_size = int(np.prod(action_space.nvec))  # УБРАТЬ НЕЙРОСЕТЬ!!!
         self.memory = deque(maxlen=5000)
         self.gamma = 0.95
         self.epsilon = 1.0
